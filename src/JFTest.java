@@ -6,11 +6,13 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import javax.swing.JTextField;
 
 
 public class JFTest extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField myText;
 
 	/**
 	 * Launch the application.
@@ -44,6 +46,10 @@ public class JFTest extends JFrame {
 		
 		JButton btnHi = new JButton("Hi");
 		contentPane.add(btnHi, BorderLayout.WEST);
+		
+		myText = new JTextField();
+		contentPane.add(myText, BorderLayout.CENTER);
+		myText.setColumns(10);
 	}
 
 }
