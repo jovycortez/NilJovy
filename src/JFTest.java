@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JButton;
 
 
 public class JFTest extends JFrame {
@@ -40,6 +41,9 @@ public class JFTest extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Hi Simmigon");
 		contentPane.add(lblNewLabel, BorderLayout.NORTH);
+		
+		JButton btnHi = new JButton("Hi");
+		contentPane.add(btnHi, BorderLayout.WEST);
 	}
 
 }
