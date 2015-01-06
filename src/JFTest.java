@@ -7,6 +7,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 public class JFTest extends JFrame {
@@ -41,15 +43,23 @@ public class JFTest extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
-		JLabel lblNewLabel = new JLabel("Hi Simmigon");
+		final JLabel lblNewLabel = new JLabel("Hi Simmigon");
 		contentPane.add(lblNewLabel, BorderLayout.NORTH);
 		
 		JButton btnHi = new JButton("Hi");
+		btnHi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String txtNew = myText.getText();
+				lblNewLabel.setText(txtNew);
+			}
+		});
 		contentPane.add(btnHi, BorderLayout.WEST);
 		
 		myText = new JTextField();
 		contentPane.add(myText, BorderLayout.CENTER);
 		myText.setColumns(10);
+		
+		
 	}
 
 }
