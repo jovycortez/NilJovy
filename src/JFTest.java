@@ -10,11 +10,12 @@ import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-
 public class JFTest extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField myText;
+	//here is the globe variable I am talking about
+	JLabel lblNewLabel;
 
 	/**
 	 * Launch the application.
@@ -42,24 +43,25 @@ public class JFTest extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
-		final JLabel lblNewLabel = new JLabel("Hi Simmigon");
+		// Remove final and make the lblNewLabel globe
+		lblNewLabel = new JLabel("Hi Simmigon");
 		contentPane.add(lblNewLabel, BorderLayout.NORTH);
-		
+
 		JButton btnHi = new JButton("Hi");
 		btnHi.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String txtNew = myText.getText();
-				lblNewLabel.setText(txtNew);
+				// Remove String txtNew
+				String txtNew = "";
+				// This is how I would do it
+				lblNewLabel.setText(myText.getText());
 			}
 		});
 		contentPane.add(btnHi, BorderLayout.WEST);
-		
+
 		myText = new JTextField();
 		contentPane.add(myText, BorderLayout.CENTER);
 		myText.setColumns(10);
-		
-		
+
 	}
 
 }
