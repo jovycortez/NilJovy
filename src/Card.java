@@ -27,6 +27,8 @@ import javax.swing.border.LineBorder;
 import java.awt.Color;
 
 import javax.swing.SwingConstants;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class Card extends JFrame {
 
@@ -63,6 +65,7 @@ public class Card extends JFrame {
 	JPanel Home;
 	JPanel MathDrills;
 	JPanel Scores;
+	private JComboBox comboBox;
 
 	/**
 	 * Launch the application.
@@ -102,6 +105,7 @@ public class Card extends JFrame {
 		JButton button = new JButton("Exit");
 		button.setBounds(325, 218, 89, 23);
 		Home.add(button);
+		
 
 		JButton btnOk = new JButton("Ok");
 		btnOk.addActionListener(new ActionListener() {
@@ -178,6 +182,13 @@ public class Card extends JFrame {
 		JRadioButton radioButton_3 = new JRadioButton("123 + 123");
 		radioButton_3.setBounds(190, 84, 89, 23);
 		Home.add(radioButton_3);
+		
+		comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"10", "20"}));
+		comboBox.setSelectedIndex(0);
+		comboBox.setBounds(114, 151, 64, 26);
+		Home.add(comboBox);
+		
 		// All math
 		// The first run
 
