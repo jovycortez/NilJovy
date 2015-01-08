@@ -10,7 +10,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class NoLooping extends JFrame {
+public class NoLoop extends JFrame {
 
 	/**
 	 * 
@@ -29,7 +29,7 @@ public class NoLooping extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					NoLooping frame = new NoLooping();
+					NoLoop frame = new NoLoop();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +41,7 @@ public class NoLooping extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public NoLooping() {
+	public NoLoop() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

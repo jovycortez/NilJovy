@@ -16,6 +16,7 @@ public class JFTest extends JFrame {
 	private JTextField myText;
 	//here is the globe variable I am talking about
 	JLabel lblNewLabel;
+	private JPanel panel;
 
 	/**
 	 * Launch the application.
@@ -61,6 +62,9 @@ public class JFTest extends JFrame {
 		myText = new JTextField();
 		contentPane.add(myText, BorderLayout.CENTER);
 		myText.setColumns(10);
+		
+		panel = new JPanel();
+		contentPane.add(panel, BorderLayout.SOUTH);
 
 	}
 
